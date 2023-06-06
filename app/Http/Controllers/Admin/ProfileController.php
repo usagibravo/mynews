@@ -65,6 +65,6 @@ class ProfileController extends Controller
         $prof_history->edited_at = Carbon::now();
         $prof_history->save();
 
-        return view('admin.profile.edit', ['profile_form' => $profile]);
+        return redirect('admin/profile/edit?id=' . $request->id);
     }
 }
